@@ -78,6 +78,7 @@ mvn compile exec:java -Dexec.mainClass="org.example.SQSCallange"
 See 
 [SQS Java docs](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sqs/package-summary.html) for more details
 
+Please, make sure that your `sqsClient` is configured to use **the same region** as your Cloud9 environment.
 
 ## Challange 1: Create sqs queue using java sdk
 #### Hint

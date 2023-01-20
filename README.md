@@ -33,6 +33,12 @@ Below is the structure of the generated project.
 
 #### Building the project
 ```
+. ~/.bashrc
+
+cd sqs-java-demo/
+
 mvn clean package
+
+mvn compile exec:java -Dexec.mainClass="org.example.SQSExample"
 ```
 

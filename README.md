@@ -6,7 +6,7 @@ This project contains a maven application with [AWS Java SDK 2.x](https://github
 - log-in to your account on event engine
 - create Cloud9 environment (with t3.medium instance)
 - in Cloud9 terminal run `vi set_up_script.sh`
-- in vi go type `:set paste` then click `i`
+- in vi go type `:set paste` then click enter and `i`
 - and copy paste script
 
 ```
@@ -35,7 +35,7 @@ sudo -i -H -u ec2-user bash -c "echo -e '[default]\nregion=eu-west-1\n' > ~/.aws
 echo '=== Setting up code ==='
 echo '=== DONE ==='
 ```
-- type `: wq!`
+- click esc and type `: wq!`
 - execute script `. set_up_script.sh` 
 - run `. ~/.bashrc`
 - and change directory to sqs-java demo by runing `cd sqs-java-demo/`
@@ -174,6 +174,4 @@ Use
 ## Links
 
 [AWS Java Developer Guide for version 2.x](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/java_sqs_code_examples.html).
-
-```
 

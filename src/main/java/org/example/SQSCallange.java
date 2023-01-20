@@ -17,12 +17,14 @@ import software.amazon.awssdk.services.sqs.model.SendMessageBatchRequestEntry;
 import software.amazon.awssdk.services.sqs.model.SendMessageRequest;
 import software.amazon.awssdk.services.sqs.model.SqsException;
 
+import java.util.List;
+
 public class SQSCallange {
     
     public static void main(String[] args) {
         String queueName = "queue" + System.currentTimeMillis();
         SqsClient sqsClient = SqsClient.builder()
-            .region(Region.US_WEST_2)
+            .region(Region.US_EAST_1)
             .credentialsProvider(ProfileCredentialsProvider.create())
             .build();
 

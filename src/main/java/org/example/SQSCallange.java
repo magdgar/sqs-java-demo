@@ -113,18 +113,22 @@ public class SQSCallange {
     public static void deleteMessages(SqsClient sqsClient, String queueUrl, List<Message> messages) {
         System.out.println("\nDelete Messages");
 
-        try {
-            for (Message message : messages) {
-                // build deleteMessageRequest
+        if(messages == null) {
+            System.out.println("\nNo messages to delete");
+        } else {
+
+            try {
+                for (Message message : messages) {
+                    // build deleteMessageRequest
 
 
-                //use sqsClient to egzecute deleteMessagesRequest    
+                    //use sqsClient to egzecute deleteMessagesRequest    
                 
+                }
+            } catch (SqsException e) {
+                System.err.println(e.awsErrorDetails().errorMessage());
+                System.exit(1);
             }
-
-        } catch (SqsException e) {
-            System.err.println(e.awsErrorDetails().errorMessage());
-            System.exit(1);
         }
    }
 }
